@@ -1,0 +1,27 @@
+h2{
+    font-size: 25px;
+    font-style: bold;
+    margin-left: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.data_diri{
+    font-size:18px;
+}
+
+.barcode{
+    position: absolute; left:115; right: 80; top: 420; bottom: 0;
+    
+}
+
+.barcodeFosti{
+    position: absolute; left:330; right: 80; top: 420; bottom: 200;
+}
+
+.tabel{
+    position: absolute; left:115; right: 80; top: 650; bottom: 200;
+}
+
+#fotoTableBarcode{
+    padding-top: 30px;
+}
