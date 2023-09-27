@@ -20,6 +20,6 @@ if (isset($_SESSION['admin'])) {
     	echo "<script>window.location='daftar.php'</script>";
     }
 } else {
-        echo "<script>alert('ACCESS DENIED');window.location='login/';</script>";
+	echo "<script>alert('ACCESS DENIED');window.location='login/';</script>";
 }
 ?>

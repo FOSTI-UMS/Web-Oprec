@@ -15,7 +15,7 @@ if (!isset($_SESSION['admin'])) {
 			if ($password == $fetchData['password']) {
 				// Password Benar
 				$_SESSION['admin']=$fetchData;
-				echo "window.location='../';</script>";
+				echo "<script>window.location='../';</script>";
 			} else {
 				// Password Gagal
 				echo "<script>window.location='./?pesan=gagal';</script>";
@@ -32,7 +32,7 @@ if (!isset($_SESSION['admin'])) {
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Sign In | WEB OPREC FOSTI 2020</title>
+    <title>Sign In | WEB OPREC FOSTI 2023</title>
     <!-- Favicon-->
     <link rel="icon" href="../../assets/favicon.png" type="image/x-icon">
 
@@ -62,20 +62,12 @@ if (!isset($_SESSION['admin'])) {
 
 </head>
 <body class="login-page">
-    <menu>
-        <ul>
-                <li><a href="http://fosti.ums.ac.id" title="Homepage" ><i class="material-icons" style="font-size: 15px;">home</i> Beranda</a></li>
-                <li><a title="Blog Fosti" href="http://fosti.ums.ac.id/blog">Blog</a></li>
-                <li><a title="Event Fosti" href="https://event.fostiums.org/">Event</a></li>
-                <li><a title="Source Code" href="https://github.com/fosti">Source Code</a></li>
-        </ul>
-    </menu>
     <div class="login-box">
         <div class="logo">
-            <a title="Homepage" href="http://fosti.ums.ac.id/"><b>F<b style="color:red;">OS</b>TI 2020</b></a>
+            <a title="Homepage" href="http://fosti.ums.ac.id/"><b>F<b style="color:red;">OS</b>TI 2023</b></a>
             <small>WEB OPREC FOSTI</small>
         </div>
-        <div style="border-radius: 15px 15px 0 0 !important; }" class="card">
+        <div style="border-radius: 15px 15px 0 0 !important;" class="card">
             <div class="body">
                 <form id="sign_in" action="" method="POST">
                     <div class="msg">Silahkan login untuk melanjutkan</div>
@@ -108,7 +100,7 @@ if (!isset($_SESSION['admin'])) {
             </div>
         </div>
     </div>
-    <footer><p>Copyright © 2020 | <a href="http://fosti.ums.ac.id/" title="Homepage">FOSTI UMS </a> | All Rights Reserved.</p></footer>
+    <footer><p>Copyright © 2023 | <a href="http://fosti.ums.ac.id/" title="Homepage">FOSTI UMS </a> | All Rights Reserved.</p></footer>
         <!-- Show Password -->
     <script>
     (function() {
@@ -202,7 +194,5 @@ if (!isset($_SESSION['admin'])) {
 </body>
 </html>
 <?php
-} else {
-	echo "<script>window.location='../';</script>";
 }
 ?>

@@ -370,6 +370,7 @@ footer ul li a{
 #left_form {
 	background-color: #F60;
 	min-height: 460px;
+	height: 100%;
 	color: #fff;
 	text-align: center;
 	padding: 70px 50px 30px 50px;
@@ -512,7 +513,6 @@ button.submit:before {
 
 #bottom-wizard {
 	text-align: right;
-	position: absolute;
 	width: 100%;
 	bottom: 25px;
 	right: 45px;

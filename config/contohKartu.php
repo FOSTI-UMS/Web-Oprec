@@ -1,6 +1,6 @@
 <?php
-function kartuPeserta($nim, $nama, $email, $nohp, $alamat, $jk, $semester, $prodi, $motto, $alasan, $foto, $qrcode, $qrcp){
-    require '../config/library/vendor/autoload.php';
+function kartuPeserta($nim, $nama, $email, $nohp, $alamat, $jk, $semester, $prodi, $motto, $alasan, $foto, $qrcode) {
+    require '../config/vendor/autoload.php';
 
     $mpdf = new \Mpdf\Mpdf([
         'margin_top' => 20,
@@ -19,10 +19,8 @@ function kartuPeserta($nim, $nama, $email, $nohp, $alamat, $jk, $semester, $prod
         <title>Kartu Peserta</title>
     </head>
     <body>
-
     
     <div class=judul><h2>Open Recruitment Fosti UMS 2020</h2></div>
-
 
     <br>
     <br>
@@ -96,18 +94,12 @@ function kartuPeserta($nim, $nama, $email, $nohp, $alamat, $jk, $semester, $prod
             style="width: 35mm; height: 45mm; margin: 0;" />
         </div>
         </table>
-  
-
-';
-    
-    
-    $html .= '</body>
+        </body>
     </html>';
+    
     $mpdf->writeHtml($html);
     $mpdf->Image('../img/ums.png', 7,5, 30, 30, 'png', '', true, false);
     $mpdf->Image('../img/fosti.png', 160, 15, 40, 20, 'png', '', true, false);
-    
-return $mpdf->Output('../img/kartuPeserta/'.$nim.'.pdf', 'F');  
-
+    return $mpdf->Output('../img/kartuPeserta/'.$nim.'.pdf', 'F');
 }
 ?>

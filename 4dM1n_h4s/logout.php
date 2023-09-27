@@ -1,5 +1,5 @@
 <?php
 session_start();
 session_destroy();
-echo "<script>window.location='login/'</script>";
+header("location: /4dM1n_h4s/login/index.php");
 ?>

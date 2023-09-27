@@ -7,26 +7,20 @@ $mail->SMTPDebug = 0;
 $mail->isSMTP();
 $mail->Host       = 'smtp.gmail.com';
 $mail->SMTPAuth   = true;
-$mail->Username   = 'fostiums@gmail.com';
-$mail->Password   = 'fosti2019m4ju';
+$mail->Username   = 'fostifest22@gmail.com';
+$mail->Password   = 'ppsddvsrtzgjpsot';
 $mail->SMTPSecure = 'tls';
 $mail->Port       = 587;
-// $mail->Host       = 'smtp.mailtrap.io';
-// $mail->SMTPAuth   = true;
-// $mail->Username   = '434de3ed9af7de';
-// $mail->Password   = 'a6e60c2308c643';
-// $mail->SMTPSecure = 'tls';
-// $mail->Port       = 587;
 
 //Recipients
-$mail->setFrom('fostiums@gmail.com', 'FOSTI UMS');
+$mail->setFrom('fostifest22@gmail.com', 'OPREC FOSTI UMS');
 $mail->addAddress($email, $nama);
 $mail->addAddress($email);
 $mail->addReplyTo('fostiums@gmail.com');
+$mail->addEmbeddedImage($filename, 'qr_code');
 
 // Attachment
 // $mail->addAttachment($kartuPeserta);
-
 
 // Content
 $mail->isHTML(true);
@@ -99,7 +93,7 @@ $mail->Body    = '
                 cursor: pointer;
             }
         </style>
-    <title>Pendaftaran OPREC 2020</title>
+    <title>Pendaftaran OPREC FOSTI 2023</title>
 </head>
 <body>
     <div class="data">
@@ -145,22 +139,24 @@ $mail->Body    = '
         </table>
 
         <hr>
-        <p align="center"><b>KLIK TOMBOL DIBAWAH INI UNTUK MENDOWNLOAD KARTU PESERTA OPREC<b></p>
-        
+        <p align="center"><b>KODE QR PESERTA<b></p>
         <center>
-            <a href="https://oprec.fostiums.org/img/kartuPeserta/'.$nim.'.pdf" class="konfirmasi">DOWNLOAD</a> 
+            <img src="cid:qr_code" alt="QR Code" width="200" height="200">
+            <br>
+            <p>
+            Harap lakukan konfirmasi pendaftaran pada contact person berikut setelah menerima email ini.<br/>
+            <a href="">(Amanda)</a>&nbsp;|&nbsp;
+            <a href="">(Zul)</a>
+            </p>
+            <br></br>
         </center>
-<br><br>
         <hr>
-
     </div>
     <center>
         <small>
-            <strong style="text-align:center;">Copyright &copy; 2020  |<a href="http://fostiums.org"> FOSTI </a>|  All rights reserved. </strong>
+            <strong style="text-align:center;">Copyright &copy; 2023  |<a href="http://fostiums.org"> FOSTI </a>|  All rights reserved. </strong>
         </small>
     </center>
-
-
 </body>
 </html>
 ';
