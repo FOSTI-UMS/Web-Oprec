@@ -42,6 +42,7 @@ $koneksi = $dbc;
                                             <th>Email</th>
                                             <th>SMT</th>
                                             <th>PRODI</th>
+                                            <th>LINK CV</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -61,6 +62,7 @@ $koneksi = $dbc;
                                             echo "<td>" . $row['email'] . "</td>";
                                             echo "<td>" . $row['semester'] . "</td>";
                                             echo "<td>" . $row['prodi'] . "</td>";
+                                            echo "<td>" . $row['link_cv'] . "</td>";
                                             echo '<td><a class="btn btn-danger btn-sm" href=delete.php?nim=' . $row["nim"] . '><i class="material-icons">delete</i>Hapus</a></td>';
 
                                             echo "</tr>";

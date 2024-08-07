@@ -210,11 +210,12 @@
 			$prodi = mysqli_escape_string($dbc, $_POST['prodi']);
 			$motto = mysqli_escape_string($dbc, $_POST['motto']);
 			$alasan = mysqli_escape_string($dbc, $_POST['alasan']);
+			$linkcv = mysqli_escape_string($dbc, $_POST['linkcv']);
 			$foto = uploadFoto();
 			$fotoKtm = uploadFotoKtm();
 			$fotoSosmed = uploadFotoSosmed();
 
-			$data = [$nim, $nama, $email, $nohp, $alamat, $jk, $semester, $prodi, $motto, $alasan, $foto, $fotoKtm, $fotoSosmed];
+			$data = [$nim, $nama, $email, $nohp, $alamat, $jk, $semester, $prodi, $motto, $alasan, $foto, $fotoKtm, $fotoSosmed, $linkcv];
 
 			$error = array();
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -261,7 +262,7 @@
 					$filename = mysqli_escape_string($dbc, $filename);
 					// Entry Data
 					if ($create == True) {
-						$sql = mysqli_query($dbc, "INSERT INTO pendaftar(nim,nama,jenis_kelamin,nohp,email,alamat,prodi,semester,motto,alasan_masuk,qr,foto,foto_ktm,foto_sosmed) VALUES ('$nim','$nama','$jk','$nohp','$email','$alamat','$prodi','$semester','$motto','$alasan','$filename', '$foto', '$fotoKtm', '$fotoSosmed')");
+						$sql = mysqli_query($dbc, "INSERT INTO pendaftar(nim,nama,jenis_kelamin,nohp,email,alamat,prodi,semester,motto,alasan_masuk,qr,foto,foto_ktm,foto_sosmed,link_cv) VALUES ('$nim','$nama','$jk','$nohp','$email','$alamat','$prodi','$semester','$motto','$alasan','$filename', '$foto', '$fotoKtm', '$fotoSosmed', '$linkcv')");
 
 						if ($sql) {
 							include("../config/contohKartu.php");

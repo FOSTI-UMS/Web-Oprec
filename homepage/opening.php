@@ -181,6 +181,13 @@
 											<label class="custom-file-label" for="customFile">Screenshot Follow Sosmed Fosti</label>
 										</div>
 									</div>
+									<div class="row">
+										<div class="col">
+											<div class="form-group">
+												<input type="text" name="linkcv" class="form-control" placeholder="Link CV">
+											</div>
+										</div>
+									</div>
 								</div>
 								<!-- /step-->
 
