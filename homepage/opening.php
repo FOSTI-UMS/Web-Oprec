@@ -234,7 +234,7 @@
 										<textarea name="additional_message" class="form-control" style="height:150px;" placeholder="Pastikan data yang kamu input telah benar, kami tidak bertanggungjawab atas kekliruan data anda. Silahkan cek data anda kembali dengan menekan tombol Backward, apabila data anda benar silahkan submit." disabled=""></textarea>
 									</div>
 									<div class="form-group terms">
-										<div class="g-recaptcha" data-sitekey="6LdPzFQUAAAAAE46xIUneyoQ_m6n-rutMD8q5Tc5"></div> <!--oprec.fostiums.org-->										<br>
+										<div class="g-recaptcha" data-sitekey="6LdZjxoTAAAAAEWgQRRLKR0wBHcQofl9QTsmVR1h"></div> <!--oprec.fostiums.org-->										<br>
 									</div>
 								</div>
 								<!-- /step

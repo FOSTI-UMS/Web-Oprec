@@ -192,13 +192,27 @@
 	if (isset($_POST['process'])) {
 		$email			= $_POST['email'];
 		$captcha		= $_POST['g-recaptcha-response'];
-		$secretKey		= "6LdPzFQUAAAAAJCoPs2cKjCKo7506WN8OqQNshV6"; //oprec.fostiums.org
-		// $secretKey		= "6LcW38AZAAAAAEzGLWWsv9DcHitIhkDvgfhjV8WR"; //127.0.0.1
+		// $secretKey		= "6LdPzFQUAAAAAJCoPs2cKjCKo7506WN8OqQNshV6"; //oprec.fostiums.org
+		$secretKey		= "6LdZjxoTAAAAAIzsjsbvLgK7D3lkSjzO1RiAxvUw"; //127.0.0.1
 		$ip 			= $_SERVER['REMOTE_ADDR'];
-		$response		= file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $captcha . "&remoteip=" . $ip);
+		// Inisialisasi cURL
+        $ch = curl_init();
+    
+        // Pengaturan opsi cURL
+        curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
+            'secret' => $secretKey,
+            'response' => $captcha,
+            'remoteip' => $ip
+        ]));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    
+        // Eksekusi dan tangkap respons
+        $response = curl_exec($ch);
 		$responseKeys	= json_decode($response, true);
 
-		if (intval($responseKeys["success"]) == 1) {
+		if ($responseKeys["success"] == '1') {
 			include("../config/koneksi.php");
 			$nim = mysqli_escape_string($dbc, trim($_POST['nim']));
 			$nama = mysqli_escape_string($dbc, $_POST['nama']);

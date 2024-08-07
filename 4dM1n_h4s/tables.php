@@ -62,6 +62,7 @@ if (isset($_SESSION['admin'])) {
                     <th>Foto</th>
                     <th>Foto KTM</th>
                     <th>Foto Sosmed</th>
+                    <th>LINK CV</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -86,10 +87,12 @@ if (isset($_SESSION['admin'])) {
                     echo "<td>" . $row['semester'] . "</td>";
                     echo "<td>" . $row['motto'] . "</td>";
                     echo "<td>" . $row['alasan_masuk'] . "</td>";
+                    
                     echo '<td><a class="btn btn-primary btn-sm" href=' . $row['qr'] . '><i class="fa fa-eye"></i>Lihat</a></td>';
                     echo '<td><a class="btn btn-primary btn-sm" href=../img/foto_pribadi/' . $row['foto'] . '><i class="fa fa-eye"></i>Lihat</a></td>';
                     echo '<td><a class="btn btn-primary btn-sm" href=../img/foto_ktm/' . $row['foto_ktm'] . '><i class="fa fa-eye"></i>Lihat</a></td>';
                     echo '<td><a class="btn btn-primary btn-sm" href=../img/foto_sosmed/' . $row['foto_sosmed'] . '><i class="fa fa-eye"></i>Lihat</a></td>';
+                    echo "<td>" . $row['link_cv'] . "</td>";
                     echo '<td><a id="hapus" class="btn btn-danger btn-sm" href=delete.php?nim=' . $row["nim"] . '><i class="fa fa-trash"></i>Hapus</a></td>';
 
                     echo "</tr>";
